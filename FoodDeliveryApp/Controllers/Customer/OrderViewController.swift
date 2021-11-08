@@ -51,7 +51,7 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
             if order["status"] != nil {
                 if let orderDetails = order["order_details"].array {
                     
-                    self.lbStatus.text = order["status"].string!.uppercased()
+                    self.lbStatus.text = (order["status"] as? String)?.uppercased()
                     self.cart = orderDetails
                     self.tbvOrder.reloadData()
                     
@@ -88,7 +88,7 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
             timeInterval: 1,
             target: self,
             selector: #selector(getDriverLocation(_:)),
-            userInfo: nil, repeats: true)
+            userInfo: nil, repeats: false)
     }
     
     

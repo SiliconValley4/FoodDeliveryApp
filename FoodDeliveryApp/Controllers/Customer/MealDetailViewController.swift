@@ -147,6 +147,8 @@ class MealDetailViewController: UIViewController {
                 self.present(alertView, animated: true, completion: nil)
             }
         })
+        
+        print("Added items to cart")
     }
     
     
