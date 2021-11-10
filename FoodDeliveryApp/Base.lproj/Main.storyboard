@@ -96,7 +96,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="rEK-uE-wpZ" customClass="DeliveryViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qYi-nQ-oZH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oli-Zo-Hbj">
@@ -161,7 +161,7 @@
             <objects>
                 <viewController id="qJj-rX-Pd6" customClass="DriversProfileViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z4W-Sa-l6R">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIe-pP-bPF">
@@ -202,7 +202,7 @@
             <objects>
                 <viewController id="trK-MH-QSy" customClass="DriversOrderViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kGe-PU-9tT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wc6-H8-swf">
@@ -780,7 +780,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23p-SJ-Sc7">
-                                <rect key="frame" x="104" y="735" width="207" height="31"/>
+                                <rect key="frame" x="100" y="731" width="214" height="31"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -790,22 +790,23 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UO2-JZ-cRK" customClass="STPPaymentCardTextField" customModule="Stripe">
-                                <rect key="frame" x="16" y="140" width="382" height="140"/>
+                                <rect key="frame" x="20" y="136" width="374" height="140"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="6Jc-NG-hhG"/>
+                                    <constraint firstAttribute="height" constant="140" id="8gt-yA-YoK"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JuQ-OM-csF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JuQ-OM-csF" firstAttribute="bottom" secondItem="23p-SJ-Sc7" secondAttribute="bottom" constant="47" id="Ap6-X4-ckg"/>
-                            <constraint firstItem="JuQ-OM-csF" firstAttribute="trailing" secondItem="UO2-JZ-cRK" secondAttribute="trailing" constant="16" id="MO1-8M-mMs"/>
-                            <constraint firstItem="UO2-JZ-cRK" firstAttribute="leading" secondItem="JuQ-OM-csF" secondAttribute="leading" constant="16" id="byB-VT-R1l"/>
-                            <constraint firstItem="JuQ-OM-csF" firstAttribute="trailing" secondItem="23p-SJ-Sc7" secondAttribute="trailing" constant="103" id="f5A-MB-glq"/>
-                            <constraint firstItem="23p-SJ-Sc7" firstAttribute="leading" secondItem="JuQ-OM-csF" secondAttribute="leading" constant="104" id="o7G-l0-zxl"/>
-                            <constraint firstItem="UO2-JZ-cRK" firstAttribute="top" secondItem="JuQ-OM-csF" secondAttribute="top" constant="84" id="wxS-yK-NDy"/>
+                            <constraint firstItem="23p-SJ-Sc7" firstAttribute="leading" secondItem="JuQ-OM-csF" secondAttribute="leading" constant="100" id="0oB-yU-tuJ"/>
+                            <constraint firstItem="23p-SJ-Sc7" firstAttribute="top" secondItem="UO2-JZ-cRK" secondAttribute="bottom" constant="455" id="3qH-7H-Me6"/>
+                            <constraint firstItem="UO2-JZ-cRK" firstAttribute="top" secondItem="JuQ-OM-csF" secondAttribute="top" constant="80" id="84q-dS-uJH"/>
+                            <constraint firstItem="JuQ-OM-csF" firstAttribute="trailing" secondItem="23p-SJ-Sc7" secondAttribute="trailing" constant="100" id="9aF-2N-HHy"/>
+                            <constraint firstAttribute="bottom" secondItem="23p-SJ-Sc7" secondAttribute="bottom" constant="80" id="Mwe-vJ-xda"/>
+                            <constraint firstItem="JuQ-OM-csF" firstAttribute="trailing" secondItem="UO2-JZ-cRK" secondAttribute="trailing" constant="20" id="PVf-no-LTh"/>
+                            <constraint firstItem="UO2-JZ-cRK" firstAttribute="leading" secondItem="JuQ-OM-csF" secondAttribute="leading" constant="20" id="mfB-On-gz4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EyM-nO-hsq"/>
@@ -1050,7 +1051,7 @@
             <objects>
                 <viewController id="EAz-fl-qHg" customClass="RevenueViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0g7-dU-mzS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2XV-df-N6z" customClass="BarChartView" customModule="Charts">
@@ -1080,7 +1081,7 @@
                     <tabBarItem key="tabBarItem" title="Orders" id="ytF-wS-Avb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OdH-Yc-jvB">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1099,7 +1100,7 @@
                     <tabBarItem key="tabBarItem" title="Delivery" id="aZ1-3H-8iF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6X0-9s-sQE">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1118,7 +1119,7 @@
                     <tabBarItem key="tabBarItem" title="Earnings" id="iOf-GC-RRA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sqO-rX-5fY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1137,7 +1138,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" id="Sw4-jh-aF4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZaB-45-LcT">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
