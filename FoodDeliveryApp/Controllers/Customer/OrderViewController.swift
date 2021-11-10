@@ -52,34 +52,41 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
             //
             let order = json["order"]
             
-            if order["status"] != nil {
-                if let orderDetails = order["order_details"].array {
-                    
-                    self.lbStatus.text = order["status"].string!
+            if(order != nil){
+                if order["status"] != nil {
+                    if let orderDetails = order["order_details"].array {
+                        
+                        self.lbStatus.text = order["status"].string!
 
-                    self.cart = orderDetails
-                    self.tbvOrder.reloadData()
+                        self.cart = orderDetails
+                        self.tbvOrder.reloadData()
+                        
+                    }
+                    //
+                    let from = order["restaurant"]["address"].string!
+                    print(from)
+                    let to = order["address"].string!
+                    print(to)
                     
-                }
-                //
-                let from = order["restaurant"]["address"].string!
-                print(from)
-                let to = order["address"].string!
-                print(to)
-                
-                self.getLocation(from, "RES", { (sou) in
-                    self.source = sou
-                    
-                    self.getLocation(to, "CUS", { (des) in
-                        self.destination = des
-                        self.getDirections()
+                    self.getLocation(from, "RES", { (sou) in
+                        self.source = sou
+                        
+                        self.getLocation(to, "CUS", { (des) in
+                            self.destination = des
+                            self.getDirections()
+                        })
                     })
-                })
-                if order["status"] != "Delivered" {
-                    self.setTimer()
+                    if order["status"] != "Delivered" {
+                        self.setTimer()
+                    }
+                    
                 }
-                
             }
+            else {
+                self.lbStatus.text = "no prev order"
+            }
+            
+
             
             
             
