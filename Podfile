@@ -6,7 +6,7 @@ target 'FoodDeliveryApp' do
   use_frameworks!
 
   # Pods for FoodDeliveryApp
-	# pod 'Alamofire'
+	pod 'Alamofire'
 	pod 'AlamofireImage'
 	pod 'SwiftKeychainWrapper'
 	pod 'Stripe'
