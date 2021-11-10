@@ -29,6 +29,10 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     //Location
     var locationManager: CLLocationManager!
     
+    override func viewDidAppear(_ animated: Bool) {
+        loadmeals()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,23 +40,29 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         tbvCart.dataSource = self
         tbvCart.delegate = self
         
-        
+        // Do any additional setup after loading the view.
+    }
+    
+    func loadmeals() {
         // Empty cart / Items in cart logic
+        let emptyCart = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+
         if Cart.currentCart.items.count == 0 {
             //empty cart
-            let emptyCart = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
             emptyCart.center = self.view.center
             emptyCart.textAlignment = NSTextAlignment.center
             emptyCart.text = "Your tray is empty. Please select meal."
             self.view.addSubview(emptyCart)
         } else {
+            emptyCart.text = ""
             self.tbvCart.isHidden = false
             self.viewTotal.isHidden = false
             self.viewAddress.isHidden = false
             self.viewMap.isHidden = false
             self.viewPayment.isHidden = false
             
-            loadmeals()
+            self.tbvCart.reloadData()
+            self.labelTotal.text = "$\(Cart.currentCart.getTotal())"
         }
         //Show Current Location
         if CLLocationManager.locationServicesEnabled(){
@@ -64,13 +74,12 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             self.labelMap.showsUserLocation = true
         }
+        
+        
+        
+        
+        
 
-        // Do any additional setup after loading the view.
-    }
-    
-    func loadmeals() {
-        self.tbvCart.reloadData()
-        self.labelTotal.text = "$\(Cart.currentCart.getTotal())"
     }
     
     

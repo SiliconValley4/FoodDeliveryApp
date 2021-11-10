@@ -774,6 +774,7 @@
         <!--Payment View Controller-->
         <scene sceneID="btD-f9-gST">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wWs-H4-LKz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="eJb-ld-bIz" customClass="PaymentViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hm9-ut-dWz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -815,7 +816,6 @@
                         <segue destination="pro-bR-1cM" kind="show" identifier="ViewOrder" id="2Ju-VD-KLc"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wWs-H4-LKz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2695.6521739130435" y="3122.5446428571427"/>
         </scene>
@@ -1153,7 +1153,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2Ju-VD-KLc"/>
-        <segue reference="hFm-H6-UXJ"/>
+        <segue reference="gnU-P8-AcY"/>
         <segue reference="Zp8-kZ-mcx"/>
         <segue reference="Si1-OV-NfO"/>
     </inferredMetricsTieBreakers>
