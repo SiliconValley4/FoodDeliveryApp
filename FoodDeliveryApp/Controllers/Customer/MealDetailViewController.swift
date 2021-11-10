@@ -15,6 +15,7 @@ class MealDetailViewController: UIViewController {
     @IBOutlet weak var mealDescription: UILabel!
     @IBOutlet weak var lbQty: UILabel!
     @IBOutlet weak var lbTotal: UILabel!
+    @IBOutlet var labelIndividualCost: UILabel!
     
     var meal: Meal?
     var restaurant: Restaurant?
@@ -31,16 +32,18 @@ class MealDetailViewController: UIViewController {
     func loadMeal() {
         //
         if let price = meal?.price {
-            lbTotal.text = "$\(price)"
+            lbTotal.text = "Total:\n$\(price)"
+            labelIndividualCost.text = "Each:\n$\(price)"
         }
         
         
         mealName.text = meal?.name
         mealDescription.text = meal?.short_description
         
-        if let imageUrl = meal?.image {
-            Helpers.loadImage(imgMeal, "\(imageUrl)")
-        }
+        //if let imageUrl = meal?.image {
+            //Helpers.loadImage(imgMeal, "\(imageUrl)")
+            Helpers.loadImage(imgMeal, "https://media-cdn.tripadvisor.com/media/photo-s/0d/dd/93/0d/pizza-con-pollo-pepperoni.jpg")
+        //}
         
     }
     
@@ -55,7 +58,7 @@ class MealDetailViewController: UIViewController {
             lbQty.text = String(qty)
             
             if let price = meal?.price {
-                lbTotal.text = "$\(price * Float(qty))"
+                lbTotal.text = "Total:\n$\(price * Float(qty))"
             }
         }
     }
@@ -66,7 +69,7 @@ class MealDetailViewController: UIViewController {
             lbQty.text = String(qty)
             
             if let price = meal?.price {
-                lbTotal.text = "$\(price * Float(qty))"
+                lbTotal.text = "Total:\n$\(price * Float(qty))"
             }
         }
     
