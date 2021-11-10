@@ -36,16 +36,22 @@ class LoginViewController: UIViewController {
             self.bLogout.isHidden = true
         }
         
-        bLogin.backgroundColor = ThemeConstants.mainColor.mainColor
+        
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        configure()
         if (AccessToken.current != nil && fbLoginSuccess == true) {
             userType = userType.capitalized
             performSegue(withIdentifier: "\(userType)View", sender: self)
         }
-        
+    }
+    
+    func configure() {
+        bLogin.backgroundColor = ThemeConstants.mainColor.mainColor
+        bLogin.layer.cornerRadius = bLogin.bounds.height/2
+        //bLogin.textLabel?
     }
 
    
