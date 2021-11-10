@@ -39,6 +39,10 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        getLatestOrder()
+    }
+    
 
     func getLatestOrder() {
         APIManager.shared.getLatestOrder{(json) in
@@ -51,7 +55,8 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
             if order["status"] != nil {
                 if let orderDetails = order["order_details"].array {
                     
-                    self.lbStatus.text = (order["status"] as? String)?.uppercased()
+                    self.lbStatus.text = order["status"].string!
+
                     self.cart = orderDetails
                     self.tbvOrder.reloadData()
                     
