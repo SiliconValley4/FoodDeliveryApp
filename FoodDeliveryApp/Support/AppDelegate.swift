@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         //Adding Stripe
-        STPAPIClient.shared.publishableKey = STRIPE_PUBLIC_KEY
+        STPAPIClient.shared.publishableKey = APIConstants.Stripe.PKEY
         
         
         //Facebook Configureation

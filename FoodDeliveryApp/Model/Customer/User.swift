@@ -30,8 +30,4 @@ class User {
         self.email = nil
         self.pictureURL = nil
     }
-    
-    
-    
-    
 }
