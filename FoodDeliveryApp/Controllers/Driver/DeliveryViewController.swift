@@ -84,6 +84,30 @@ class DeliveryViewController: UIViewController, MKMapViewDelegate, CLLocationMan
             
             print(json)
             
+            
+            /*
+             
+             customer
+                 name
+                 email
+                 picture url
+                 address
+            
+             
+             order
+             
+             cart -> Order (order details 1-n) : orderID
+             mealID qty
+             total
+             
+             
+             
+             
+             
+             
+             
+             */
+            
             let order = json["order"]
             
             if let id = order["id"].int, order["status"] == "On the way" {
