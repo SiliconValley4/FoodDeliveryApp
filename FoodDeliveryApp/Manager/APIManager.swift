@@ -14,13 +14,11 @@ import MapKit
 class APIManager {
     static let shared = APIManager()
     
-    let baseURL = NSURL(string: BASE_URL)
+    let baseURL = NSURL(string: KeyCosntants.EndPoint.BASE_URL)
     
     var accessToken = ""
     var refreshToken = ""
     var expired = Date()
-    
-    
     
     //APi to login the user
     func login(userType: String, completitionHandler: @escaping (NSError?) -> Void) {
@@ -67,14 +65,9 @@ class APIManager {
 
             }
         }
-        
-        
     }
     
-    
-    
-    
-    //Aoi to logout the user
+    // API to logout the user
     func logout(completionHandler: @escaping (NSError?) -> Void) {
         
         let path = "api/social/revoke-token/"
