@@ -76,7 +76,6 @@ class APIManager {
             "client_id" : CLIENT_ID,
             "client_secret" : CLIENT_SECRET,
             "token" : self.accessToken,
-            
         ]
         
         // Alamofire for the requests
@@ -93,11 +92,7 @@ class APIManager {
         }
     }
     
-    
-    
-    
-    
-    
+
     // API to refresh the token when it's expired
     func refreshTokenIfNeed(completionHandler: @escaping () -> Void) {
         
@@ -129,13 +124,7 @@ class APIManager {
         }
     }
     
-    
-    
-    
-    
-   
-    
-    
+ 
 //    Get restaurants List
     
     func getRestaurants(completionHandler: @escaping (JSON?) -> Void){
