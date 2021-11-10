@@ -82,7 +82,7 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    //
+    // change to repeats: true to update driver location
     func setTimer() {
         timer = Timer.scheduledTimer(
             timeInterval: 1,

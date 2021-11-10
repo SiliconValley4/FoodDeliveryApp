@@ -789,52 +789,23 @@
                                     <action selector="placeOrder:" destination="eJb-ld-bIz" eventType="touchUpInside" id="xDc-rg-B3r"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UO2-JZ-cRK" customClass="STPPaymentCardTextField" customModule="Stripe">
-                                <rect key="frame" x="20" y="140" width="350" height="137"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UO2-JZ-cRK" customClass="STPPaymentCardTextField" customModule="Stripe">
+                                <rect key="frame" x="16" y="140" width="382" height="140"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="_numberPlaceholder" value="42"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="numberPlaceholder" value="42"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="_expirationPlaceholder" value="12/24"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="expirationPlaceholder" value="12/24"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="_cvcPlaceholder" value="123"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="cvcPlaceholder" value="123"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="_postalCodePlaceholder" value="12345"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="postalCodePlaceholder" value="12345"/>
-                                </userDefinedRuntimeAttributes>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="6Jc-NG-hhG"/>
+                                </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6KQ-sU-qBn">
-                                <rect key="frame" x="36" y="328" width="334" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VXa-bZ-DKy">
-                                <rect key="frame" x="40" y="391" width="334" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ip-so-Kgh">
-                                <rect key="frame" x="40" y="466" width="334" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="buo-S8-PIz">
-                                <rect key="frame" x="40" y="529" width="334" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JuQ-OM-csF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JuQ-OM-csF" firstAttribute="bottom" secondItem="23p-SJ-Sc7" secondAttribute="bottom" constant="47" id="Ap6-X4-ckg"/>
+                            <constraint firstItem="JuQ-OM-csF" firstAttribute="trailing" secondItem="UO2-JZ-cRK" secondAttribute="trailing" constant="16" id="MO1-8M-mMs"/>
+                            <constraint firstItem="UO2-JZ-cRK" firstAttribute="leading" secondItem="JuQ-OM-csF" secondAttribute="leading" constant="16" id="byB-VT-R1l"/>
                             <constraint firstItem="JuQ-OM-csF" firstAttribute="trailing" secondItem="23p-SJ-Sc7" secondAttribute="trailing" constant="103" id="f5A-MB-glq"/>
                             <constraint firstItem="23p-SJ-Sc7" firstAttribute="leading" secondItem="JuQ-OM-csF" secondAttribute="leading" constant="104" id="o7G-l0-zxl"/>
+                            <constraint firstItem="UO2-JZ-cRK" firstAttribute="top" secondItem="JuQ-OM-csF" secondAttribute="top" constant="84" id="wxS-yK-NDy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EyM-nO-hsq"/>
