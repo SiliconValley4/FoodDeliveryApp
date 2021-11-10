@@ -14,7 +14,7 @@
 		10286BE42734773000E3FBE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10286BE22734773000E3FBE5 /* LaunchScreen.storyboard */; };
 		10286BF027347ACA00E3FBE5 /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10286BEF27347ACA00E3FBE5 /* FBManager.swift */; };
 		10286BF227347AD700E3FBE5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10286BF127347AD700E3FBE5 /* APIManager.swift */; };
-		10286BF527347AF200E3FBE5 /* KeyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10286BF427347AF200E3FBE5 /* KeyConstants.swift */; };
+		10286BF527347AF200E3FBE5 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10286BF427347AF200E3FBE5 /* APIConstants.swift */; };
 		10286BF727347AFC00E3FBE5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10286BF627347AFC00E3FBE5 /* Helper.swift */; };
 		10286BFF27347C2300E3FBE5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10286BFE27347C2300E3FBE5 /* User.swift */; };
 		10286C0127347C3200E3FBE5 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10286C0027347C3200E3FBE5 /* Restaurant.swift */; };
@@ -53,7 +53,7 @@
 		10286BE52734773000E3FBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10286BEF27347ACA00E3FBE5 /* FBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
 		10286BF127347AD700E3FBE5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		10286BF427347AF200E3FBE5 /* KeyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyConstants.swift; sourceTree = "<group>"; };
+		10286BF427347AF200E3FBE5 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		10286BF627347AFC00E3FBE5 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		10286BFE27347C2300E3FBE5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		10286C0027347C3200E3FBE5 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
@@ -122,8 +122,7 @@
 				10286BEE2734783600E3FBE5 /* Model */,
 				10286BED2734781B00E3FBE5 /* View */,
 				10286BEC2734780C00E3FBE5 /* Screens */,
-				10286BD72734772E00E3FBE5 /* AppDelegate.swift */,
-				10286BD92734772E00E3FBE5 /* SceneDelegate.swift */,
+				557F3DA7273B76F600166292 /* Support */,
 				10286BDD2734772E00E3FBE5 /* Main.storyboard */,
 				10286BE02734773000E3FBE5 /* Assets.xcassets */,
 				10286BE22734773000E3FBE5 /* LaunchScreen.storyboard */,
@@ -138,7 +137,7 @@
 				10286BEF27347ACA00E3FBE5 /* FBManager.swift */,
 				10286BF127347AD700E3FBE5 /* APIManager.swift */,
 				10286BF627347AFC00E3FBE5 /* Helper.swift */,
-				10286BF427347AF200E3FBE5 /* KeyConstants.swift */,
+				10286BF427347AF200E3FBE5 /* APIConstants.swift */,
 				557F3DA5273B6DC900166292 /* StringConstants.swift */,
 			);
 			path = Manager;
@@ -233,6 +232,15 @@
 				10286C0427347C5600E3FBE5 /* Cart.swift */,
 			);
 			path = Customer;
+			sourceTree = "<group>";
+		};
+		557F3DA7273B76F600166292 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				10286BD92734772E00E3FBE5 /* SceneDelegate.swift */,
+				10286BD72734772E00E3FBE5 /* AppDelegate.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 		C5CDD41D47FD5EFC6EE5AD50 /* Pods */ = {
@@ -389,7 +397,7 @@
 				10286C0727347C6900E3FBE5 /* DriverOrder.swift in Sources */,
 				1028FAB727358B8E0038D72D /* ProfileViewController.swift in Sources */,
 				10286BDA2734772E00E3FBE5 /* SceneDelegate.swift in Sources */,
-				10286BF527347AF200E3FBE5 /* KeyConstants.swift in Sources */,
+				10286BF527347AF200E3FBE5 /* APIConstants.swift in Sources */,
 				10286C0127347C3200E3FBE5 /* Restaurant.swift in Sources */,
 				1028FAB32735894C0038D72D /* OrderViewController.swift in Sources */,
 				1028FABF273593580038D72D /* RevenueViewController.swift in Sources */,

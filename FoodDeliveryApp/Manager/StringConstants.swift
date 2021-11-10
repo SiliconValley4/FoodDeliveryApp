@@ -9,12 +9,16 @@ import Foundation
 
 struct StringConstants {
     
+    struct Title {
+        
+    }
+    
     struct Headers {
         
     }
     
     struct UserType {
-        static let USER_TYPE_CUSTOMER = "customer"
-        static let USER_TYPE_DRIVER = "driver"
+        static let CUSTOMER = "customer"
+        static let DRIVER = "driver"
     }
 }

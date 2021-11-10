@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     
     var fbLoginSuccess = false
     
-    var userType: String = USER_TYPE_CUSTOMER
+    var userType: String = StringConstants.UserType.CUSTOMER
 
 
     override func viewDidLoad() {
@@ -110,9 +110,9 @@ class LoginViewController: UIViewController {
         let type = switchUser.selectedSegmentIndex
         
         if type == 0 {
-            userType = USER_TYPE_CUSTOMER
+            userType = StringConstants.UserType.CUSTOMER
         }else {
-            userType = USER_TYPE_DRIVER
+            userType = StringConstants.UserType.DRIVER
         }
     }
     

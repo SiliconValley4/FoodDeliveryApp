@@ -13,7 +13,6 @@ import SwiftyJSON
 // Helper method to load image asynchronously
 
 class Helpers {
-    
     static func loadImage(_ imageView: UIImageView,_ urlString: String) {
         let imgURL: URL = URL(string: urlString)!
         
