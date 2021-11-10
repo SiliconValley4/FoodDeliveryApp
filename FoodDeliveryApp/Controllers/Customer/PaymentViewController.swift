@@ -41,7 +41,7 @@ class PaymentViewController: UIViewController {
         APIManager.shared.getLatestOrder { (json) in
             print("_________________________pressed APIMANager_______")
             //if json["order"]["status"] == nil || json["order"]["status"] == "Delivered"
-            if  json["order"]["status"] == "Delivered" {
+            if  json["order"]["status"] == "Delivered" || json["order"]["total"] == nil{
                 // Processing the payment and create an Order
                 print("_________________________1_______")
                 //let card = self.cardTextField.cardParams
