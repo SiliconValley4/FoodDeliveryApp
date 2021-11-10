@@ -25,7 +25,5 @@ class Helpers {
                 imageView.image = UIImage(data: data)
             })
             }.resume()
-        
     }
-    
 }
