@@ -74,6 +74,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.viewAddress.isHidden = false
             self.viewMap.isHidden = false
             self.viewPayment.isHidden = false
+            self.labelAddress.text = "123 Placer Holder ave."
             
             self.tbvCart.reloadData()
             self.labelTotal.text = "$\(Cart.currentCart.getTotal())"
