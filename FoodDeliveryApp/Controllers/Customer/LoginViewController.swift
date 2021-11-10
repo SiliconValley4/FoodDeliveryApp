@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
                 self.bLogin.setTitle("Continue as \(User.currenUser.email!)", for: .normal)
                 //self.loginFBButton.sizeToFit()
             } )
-            self.bLogin.sendActions(for: .touchUpInside)
+            //self.bLogin.sendActions(for: .touchUpInside)
         } else {
             self.bLogout.isHidden = true
         }

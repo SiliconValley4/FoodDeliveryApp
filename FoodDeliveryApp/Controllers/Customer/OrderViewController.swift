@@ -93,7 +93,7 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
             timeInterval: 1,
             target: self,
             selector: #selector(getDriverLocation(_:)),
-            userInfo: nil, repeats: false)
+            userInfo: nil, repeats: true)
     }
     
     
@@ -121,7 +121,7 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             if let location = json["location"].string {
                 
-                self.lbStatus.text = "ON THE WAY"
+                //self.lbStatus.text = "ON THE WAY"
                 
                 let split = location.components(separatedBy: ",")
                 let lat = split[0]
