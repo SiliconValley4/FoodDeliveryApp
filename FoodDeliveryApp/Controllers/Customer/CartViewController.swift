@@ -26,33 +26,58 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var labelMap: MKMapView!
     @IBOutlet weak var paymentButton: UIButton!
     
+    let emptyCart = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+    
     //Location
     var locationManager: CLLocationManager!
     
+    override func viewDidAppear(_ animated: Bool) {
+        loadmeals()
+        print("DIDAPPEAR")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("DIDDISAPPEAR")
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("DIDLOAD")
+        
+        loadmeals()
         
         
         tbvCart.dataSource = self
         tbvCart.delegate = self
         
-        
+        // Do any additional setup after loading the view.
+    }
+    
+    func loadmeals() {
         // Empty cart / Items in cart logic
+
+
         if Cart.currentCart.items.count == 0 {
             //empty cart
-            let emptyCart = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+            emptyCart.text = "Your tray is empty. Please select meal."
+            emptyCart.sizeToFit()
             emptyCart.center = self.view.center
             emptyCart.textAlignment = NSTextAlignment.center
-            emptyCart.text = "Your tray is empty. Please select meal."
             self.view.addSubview(emptyCart)
+
         } else {
+            emptyCart.isHidden = true
             self.tbvCart.isHidden = false
             self.viewTotal.isHidden = false
             self.viewAddress.isHidden = false
             self.viewMap.isHidden = false
             self.viewPayment.isHidden = false
+            self.labelAddress.text = "123 Placer Holder ave."
             
-            loadmeals()
+            self.tbvCart.reloadData()
+            self.labelTotal.text = "$\(Cart.currentCart.getTotal())"
         }
         //Show Current Location
         if CLLocationManager.locationServicesEnabled(){
@@ -64,13 +89,12 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             self.labelMap.showsUserLocation = true
         }
+        
+        
+        
+        
+        
 
-        // Do any additional setup after loading the view.
-    }
-    
-    func loadmeals() {
-        self.tbvCart.reloadData()
-        self.labelTotal.text = "$\(Cart.currentCart.getTotal())"
     }
     
     

@@ -48,10 +48,14 @@ class PaymentViewController: UIViewController {
                 //let card: STPCardParams = STPCardParams()
                 
                 let card: STPCardParams = STPCardParams()
-                card.number = self.cardTextField!.cardNumber
-                card.expMonth = UInt(self.cardTextField!.expirationMonth)
-                card.expYear = UInt(self.cardTextField!.expirationYear)
-                card.cvc = self.cardTextField!.cvc
+//                card.number = self.cardTextField!.cardNumber
+//                card.expMonth = UInt(self.cardTextField!.expirationMonth)
+//                card.expYear = UInt(self.cardTextField!.expirationYear)
+//                card.cvc = self.cardTextField!.cvc
+                card.number = "4242424242424242"
+                card.expMonth = 12
+                card.expYear = 22
+                card.cvc = "123"
                 print("____________Card Details__________")
                 print(card)
                 STPAPIClient.shared.createToken(withCard: card, completion: { (token, error) in

@@ -39,6 +39,10 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        getLatestOrder()
+    }
+    
 
     func getLatestOrder() {
         APIManager.shared.getLatestOrder{(json) in
@@ -51,7 +55,8 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
             if order["status"] != nil {
                 if let orderDetails = order["order_details"].array {
                     
-                    self.lbStatus.text = (order["status"] as? String)?.uppercased()
+                    self.lbStatus.text = order["status"].string!
+
                     self.cart = orderDetails
                     self.tbvOrder.reloadData()
                     
@@ -88,7 +93,7 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
             timeInterval: 1,
             target: self,
             selector: #selector(getDriverLocation(_:)),
-            userInfo: nil, repeats: false)
+            userInfo: nil, repeats: true)
     }
     
     
@@ -116,7 +121,7 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             if let location = json["location"].string {
                 
-                self.lbStatus.text = "ON THE WAY"
+                //self.lbStatus.text = "ON THE WAY"
                 
                 let split = location.components(separatedBy: ",")
                 let lat = split[0]
