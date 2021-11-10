@@ -26,15 +26,25 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var labelMap: MKMapView!
     @IBOutlet weak var paymentButton: UIButton!
     
+    let emptyCart = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+    
     //Location
     var locationManager: CLLocationManager!
     
     override func viewDidAppear(_ animated: Bool) {
         loadmeals()
+        print("DIDAPPEAR")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("DIDDISAPPEAR")
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("DIDLOAD")
         
         loadmeals()
         
@@ -47,7 +57,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func loadmeals() {
         // Empty cart / Items in cart logic
-        let emptyCart = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+
 
         if Cart.currentCart.items.count == 0 {
             //empty cart
