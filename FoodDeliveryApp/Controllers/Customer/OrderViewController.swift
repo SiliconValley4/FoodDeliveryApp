@@ -52,7 +52,7 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
             //
             let order = json["order"]
             
-            if(order["total"] == nil){
+            if(order["total"] != nil) {
                 if order["status"] != nil {
                     if let orderDetails = order["order_details"].array {
                         
@@ -80,9 +80,6 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         self.setTimer()
                     }
                     
-                }
-                else {
-                    self.lbStatus.text = "no status"
                 }
             }
             else {
