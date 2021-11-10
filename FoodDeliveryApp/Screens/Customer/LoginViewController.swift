@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var bLogin: UIButton!
     @IBOutlet weak var bLogout: UIButton!
+    @IBOutlet weak var mainLogo: UIImageView!
     
     //Switching User
     @IBOutlet weak var switchUser: UISegmentedControl!
@@ -34,6 +35,8 @@ class LoginViewController: UIViewController {
         } else {
             self.bLogout.isHidden = true
         }
+        
+        bLogin.backgroundColor = .yellow
         
     }
     

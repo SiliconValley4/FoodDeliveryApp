@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfP-VM-Ksj">
-                                <rect key="frame" x="10" y="602" width="370" height="31"/>
+                                <rect key="frame" x="10" y="696" width="370" height="31"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="3Fv-JR-vEE"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eg-JS-0Kn">
-                                <rect key="frame" x="10" y="643" width="370" height="37"/>
+                                <rect key="frame" x="10" y="737" width="370" height="37"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -79,7 +79,7 @@
                             <constraint firstItem="XfP-VM-Ksj" firstAttribute="trailing" secondItem="5eg-JS-0Kn" secondAttribute="trailing" id="Hb3-tS-cbH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZdR-Nd-XNd" secondAttribute="trailing" constant="100" id="HzP-2q-TbQ"/>
                             <constraint firstItem="XfP-VM-Ksj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="K8e-LB-fxU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5eg-JS-0Kn" secondAttribute="bottom" constant="130" id="P3C-3V-amW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5eg-JS-0Kn" secondAttribute="bottom" constant="36" id="P3C-3V-amW"/>
                             <constraint firstItem="5eg-JS-0Kn" firstAttribute="top" secondItem="XfP-VM-Ksj" secondAttribute="bottom" constant="10" id="S7n-FA-qAJ"/>
                             <constraint firstItem="XfP-VM-Ksj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UkS-4F-EnW"/>
                             <constraint firstItem="xGF-8O-P8A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="agY-12-Foy"/>
@@ -91,6 +91,7 @@
                     <connections>
                         <outlet property="bLogin" destination="XfP-VM-Ksj" id="ySS-Qb-jgZ"/>
                         <outlet property="bLogout" destination="5eg-JS-0Kn" id="r7k-OP-fl2"/>
+                        <outlet property="mainLogo" destination="ZdR-Nd-XNd" id="xPO-cA-1ce"/>
                         <outlet property="switchUser" destination="SIr-0J-3kw" id="wlU-RO-jQH"/>
                         <segue destination="HHd-f4-6Wm" kind="showDetail" identifier="CustomerView" id="We6-bz-cnD"/>
                         <segue destination="bQk-ef-zcq" kind="show" identifier="DriverView" id="zky-Z1-CeX"/>
