@@ -36,6 +36,8 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadmeals()
+        
         
         tbvCart.dataSource = self
         tbvCart.delegate = self
@@ -45,16 +47,18 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func loadmeals() {
         // Empty cart / Items in cart logic
-        let emptyCart = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        let emptyCart = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
 
         if Cart.currentCart.items.count == 0 {
             //empty cart
+            emptyCart.text = "Your tray is empty. Please select meal."
+            emptyCart.sizeToFit()
             emptyCart.center = self.view.center
             emptyCart.textAlignment = NSTextAlignment.center
-            emptyCart.text = "Your tray is empty. Please select meal."
             self.view.addSubview(emptyCart)
+
         } else {
-            emptyCart.text = ""
+            emptyCart.isHidden = true
             self.tbvCart.isHidden = false
             self.viewTotal.isHidden = false
             self.viewAddress.isHidden = false
