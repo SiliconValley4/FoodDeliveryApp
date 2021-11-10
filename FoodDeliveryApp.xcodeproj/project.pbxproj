@@ -119,7 +119,7 @@
 				10286BEB273477FA00E3FBE5 /* Manager */,
 				10286BEE2734783600E3FBE5 /* Model */,
 				10286BED2734781B00E3FBE5 /* View */,
-				10286BEC2734780C00E3FBE5 /* Controllers */,
+				10286BEC2734780C00E3FBE5 /* Screens */,
 				10286BD72734772E00E3FBE5 /* AppDelegate.swift */,
 				10286BD92734772E00E3FBE5 /* SceneDelegate.swift */,
 				10286BDD2734772E00E3FBE5 /* Main.storyboard */,
@@ -141,13 +141,13 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		10286BEC2734780C00E3FBE5 /* Controllers */ = {
+		10286BEC2734780C00E3FBE5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				10286BF927347B8900E3FBE5 /* Driver */,
 				10286BF827347B7800E3FBE5 /* Customer */,
 			);
-			path = Controllers;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		10286BED2734781B00E3FBE5 /* View */ = {
