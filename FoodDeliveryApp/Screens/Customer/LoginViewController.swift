@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
             self.bLogout.isHidden = true
         }
         
-        bLogin.backgroundColor = .yellow
+        bLogin.backgroundColor = ThemeConstants.mainColor.mainColor
         
     }
     
