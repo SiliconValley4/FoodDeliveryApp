@@ -97,11 +97,23 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // change to repeats: true to update driver location
     func setTimer() {
         timer = Timer.scheduledTimer(
-            timeInterval: 1,
+            timeInterval: 5,
             target: self,
             selector: #selector(getDriverLocation(_:)),
             userInfo: nil, repeats: true)
+        
+        print("Timer Called Start")
     }
+    
+    
+    /*
+     
+    View DidAppear -> setTimer(Order status on the way)
+     
+     
+     view DidAppear -> if(orderstatus O=Delivered) Timer invalidate
+     
+     */
     
     
     
