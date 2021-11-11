@@ -17,6 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rvc-hO-Yjr">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="477"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfP-VM-Ksj">
                                 <rect key="frame" x="10" y="681" width="370" height="46"/>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -32,7 +37,7 @@
                                     <action selector="loginFacebookButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bey-XG-v29"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SIr-0J-3kw">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SIr-0J-3kw">
                                 <rect key="frame" x="93" y="433" width="190" height="32"/>
                                 <segments>
                                     <segment title="Customer"/>
@@ -68,10 +73,11 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="XfP-VM-Ksj" firstAttribute="leading" secondItem="5eg-JS-0Kn" secondAttribute="leading" id="4TK-Kh-B3R"/>
                             <constraint firstItem="SIr-0J-3kw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="93" id="500-EC-3WO"/>
+                            <constraint firstItem="SIr-0J-3kw" firstAttribute="top" secondItem="xGF-8O-P8A" secondAttribute="bottom" constant="59" id="7kN-8b-v9f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xGF-8O-P8A" secondAttribute="trailing" constant="36" id="ACY-s8-x7Z"/>
                             <constraint firstItem="5eg-JS-0Kn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ADX-Fs-t9O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5eg-JS-0Kn" secondAttribute="trailing" constant="10" id="EaP-v2-W4J"/>
@@ -93,13 +99,14 @@
                         <outlet property="bLogout" destination="5eg-JS-0Kn" id="r7k-OP-fl2"/>
                         <outlet property="mainLogo" destination="ZdR-Nd-XNd" id="xPO-cA-1ce"/>
                         <outlet property="switchUser" destination="SIr-0J-3kw" id="wlU-RO-jQH"/>
+                        <outlet property="whiteSplashView" destination="Rvc-hO-Yjr" id="1vl-Ts-BJc"/>
                         <segue destination="HHd-f4-6Wm" kind="showDetail" identifier="CustomerView" id="We6-bz-cnD"/>
                         <segue destination="bQk-ef-zcq" kind="show" identifier="DriverView" id="zky-Z1-CeX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-170" y="129"/>
+            <point key="canvasLocation" x="-170.76923076923077" y="128.67298578199052"/>
         </scene>
         <!--Delivery View Controller-->
         <scene sceneID="KOh-W3-uZY">
@@ -1179,6 +1186,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

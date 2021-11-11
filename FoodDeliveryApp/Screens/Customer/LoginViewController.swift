@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var bLogin: UIButton!
     @IBOutlet weak var bLogout: UIButton!
     @IBOutlet weak var mainLogo: UIImageView!
+    @IBOutlet weak var whiteSplashView: UIView!
     
     //Switching User
     @IBOutlet weak var switchUser: UISegmentedControl!
@@ -35,9 +36,7 @@ class LoginViewController: UIViewController {
         } else {
             self.bLogout.isHidden = true
         }
-        
-        
-        
+        whiteSplashView.layer.cornerRadius = 32
     }
     
     override func viewDidAppear(_ animated: Bool) {
